@@ -1,28 +1,16 @@
-.jumbotron.text-center {
-	background-color: #9dfbd3;
-}
-
-.jumbotron h2 {
-	color: #fff;
-}
-
- #feed {
+#feed {
     padding-top: 70px;
     padding-bottom: 50px;
  }
 
- .top-navbar {
+.top-navbar {
     background-color: #94c2db;
     color: #ffffff;
- }
+}
 
- .bot-navbar {
-    background-color: #94c2db;
-    color: #ffffff;
- }
-
-.home-btn {
-    float: left;
+a {
+    color:inherit;
+    text-decoration: none;
 }
 
 .menu-btn {

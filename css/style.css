@@ -6,16 +6,6 @@
 	color: #fff;
 }
 
-.container > div {
-    display: inline-block;
-    display: -moz-inline-box;
-    *display: inline; /* For IE7 */
-    zoom: 1; /* Trigger hasLayout */
-    width: 32%;
-    text-align: center;
-    border-radius: 0;
-}
-
  #feed {
     padding-top: 70px;
     padding-bottom: 50px;
@@ -31,8 +21,10 @@
     color: #ffffff;
  }
 
- .btn {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
- }
+.home-btn {
+    float: left;
+}
+
+.menu-btn {
+    float: right;
+}

@@ -9,6 +9,7 @@
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">	
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- AWRNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,8 +19,60 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="jumbotron text-center">Profile</div>
-	<a href="home.html"><div class="btn">Home</div></a>
+	<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container" id="main-navbar">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
+				</button>
+				<button type="button" class="navbar-toggle collapsed" id="home-btn">
+					<a href="home.html">
+						<span class="glyphicon glyphicon-home"></span>
+					</a>
+				</button>
+				<a class="navbar-brand" href="home.html">Outlts</a>
+        	</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav" id="dropdown-list">
+					<li><a href="#">Upload</a></li>
+					<li><a href="notifications.html">Notifications</a></li>
+					<li><a href="#">Edit Outlets</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+	</nav>
+
+	<div class="container text-center">
+		<div class="vertical-margin-15">
+			<div class="row ">
+				<h2>KillJoy67</h2>
+			</div>
+			<div class="row">
+				<img class="profile-picture" src="http://theawesomedaily.com/wp-content/uploads/2014/11/mr-bean-historic-portraits-15.jpg">
+			</div>
+			<div class="row">
+				<p>Currently on Cloud 2</p>
+			</div>
+			<div class="row">
+				<div class="progress">
+					<div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
+						<span class="sr-only">60% Complete</span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Quotes</p></div>
+				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Text</p></div>
+				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Audio</p></div>
+			</div>
+			<div class="row">
+				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Videos</p></div>
+				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Gifs</p></div>
+				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Photos</p></div>
+			</div>
+		</div>
+	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -32,7 +32,10 @@ a {
 }
 
 .upfloat {
-    margin-top: 15px;
+    /*margin-top: 15px;*/
+    background-color: #94c2db;
+    color: white;
+    text-align: center;
 }
 
 div > .panel > .panel-heading {
@@ -48,4 +51,35 @@ div > .panel > .panel-body {
 
 .panel-default {
     box-shadow: 3px 3px 5px #eee !important;
+}
+
+.vertical-margin-15 {
+    margin-top: 15%;
+}
+
+.cloud {
+    display: inline-block;
+    font-size: 5em;
+    color: #94c2db;
+}
+
+.cloud-label {
+    margin-top: -40px;
+    font-size: 11pt;
+    color: black;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    max-width: 30%;
+}
+
+.progress {
+    max-width: 70%;
+    text-align: center;
+    margin-left: 15%;
+}
+
+.progress-bar {
+    background-color: #94c2db;
 }

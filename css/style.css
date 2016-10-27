@@ -1,6 +1,5 @@
 #feed {
-    padding-top: 70px;
-    padding-bottom: 50px;
+    margin-top: 70px;
  }
 
 a {
@@ -30,4 +29,23 @@ a {
 
 #dropdown-list > li > a {
     color: white !important;
+}
+
+.upfloat {
+    margin-top: 15px;
+}
+
+div > .panel > .panel-heading {
+    background: #94c2db !important;
+    color: white;
+    border-radius: 0;
+    border: 0;
+}
+
+div > .panel > .panel-body {
+    border: 0;
+}
+
+.panel-default {
+    box-shadow: 3px 3px 5px #eee !important;
 }

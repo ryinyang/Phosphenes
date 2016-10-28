@@ -1,5 +1,5 @@
 #feed {
-    margin-top: 70px;
+    margin-top: 5px;
  }
 
 a {
@@ -38,6 +38,11 @@ a {
     text-align: center;
 }
 
+#upfloat-meter {
+    font-size: .75em;
+    margin-top: -15px;
+}
+
 div > .panel > .panel-heading {
     background: #94c2db !important;
     color: white;
@@ -55,6 +60,10 @@ div > .panel > .panel-body {
 
 .vertical-margin-15 {
     margin-top: 15%;
+}
+
+.logo {
+    max-width: 14px;
 }
 
 .cloud {

@@ -12,6 +12,7 @@
 
 	<!-- Custom sytlesheet -->
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,39 +22,48 @@
 	<![endif]-->
 </head>
 <body>
-	<!-- h1>Notifications</h1> -->
-	<!-- <nav class="top-navbar navbar navbar-fixed-top">
-		<ul class="nav navbar-nav">
-			<li><div class="btn">Home</div></li>
-			<div class="container text-center">
-				<h2>Notifications</h2>
+	<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container" id="main-navbar">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="glyphicon glyphicon-menu-hamburger"></span>
+				</button>
+				<center><a href="home.html" class="navbar-brand">Outlts</a></center>
+        	</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav" id="dropdown-list"> 
+					<li><a href="profile.html">Profile</a></li>
+					<li><a href="quests.html">Quests</a></li>
+					<li><a href="feed.html">Feed</a></li>
+					<li><a href="settings.html">Settings</a></li>
+					<li><a href="landing.html">Sign Out</a></li>
+				</ul>
 			</div>
-		</ul>
-	</nav> -->
+		</div>
+	</nav>
+	<!-- /navbar -->
 
-    <br><p style="margin-left:101px;"><a href="landing.html"><font size="5">Back</font></a></p>
-	<center><font size="10">Outlts</font></center>
-	
-	
-<center>
-	<div class="container" id="feed">
-		<br>
-		<br>
-		<br>
-		<font size = "6">
-		<br>
-		<br>
-		<br>
-		<a href="home.html"><p>Sign In</p></font></a>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		 <p align="right"><a href="forgot.html"><font size = "5">Forgot Username/Password</font></a></p>
-
+	<div class="container text-center" id="welcome-msg">
+		<h3>Welcome to APPNAME!</h3>
 	</div>
-</center>
+
+	<div class="container" id="login-box">
+		<div class="container" id="username-input">
+			<div class="input-group">
+				<span class="input-group-addon" id="basic-addon1">Username</span>
+				<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+			</div>
+			<div class="input-group" id="password-input">
+				<span class="input-group-addon" id="basic-addon1">Password</span>
+				<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+			</div>
+		</div>
+		<div class="container">
+			<button class="btn btn-lg btn-block" id="login-btn" onclick="window.location.href ='home.html'">Login</button>
+		</div>
+	</div>
+
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

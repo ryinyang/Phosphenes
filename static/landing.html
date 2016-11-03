@@ -12,6 +12,7 @@
 
 	<!-- Custom sytlesheet -->
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/landing.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,35 +21,17 @@
   		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body>
-	<!-- h1>Notifications</h1> -->
-	<!-- <nav class="top-navbar navbar navbar-fixed-top">
-		<ul class="nav navbar-nav">
-			<li><div class="btn">Home</div></li>
-			<div class="container text-center">
-				<h2>Notifications</h2>
-			</div>
-		</ul>
-	</nav> -->
-	
-	
-	
-	<br><br><br><center><font size="10">Outlts</font></center>
-	
-	
-<center>
-	<div class="container" id="feed">
-		<br>
-		<br>
-		<br>
-		<font size = "6"><p><a href="login.html">Log In</a></p>
-		<br>
-		<br>
-		<a href="newuser.html"><p>New User</p></a></font>
-	
+<body style="background-color: #94c2db;">
 
+	<div class="container text-center" id="appname">
+		<h1>APPNAME</h1>
 	</div>
-</center>
+	<div class="container" id="btn-container">
+		<button class="btn btn-lg btn-block" id="login-btn" onclick="window.location.href ='login.html'">Login</button>
+		<button class="btn btn-lg btn-block" id="new-user-btn" onclick="window.location.href ='newuser.html'">New User</button>
+	</div>
+
+
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

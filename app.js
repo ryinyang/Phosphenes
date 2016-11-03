@@ -9,11 +9,11 @@ app.set('view engine', 'html');
 app.use(express.static(__dirname + '/static'));
 
 app.get('/', function (req, res) {
-	res.render("home");
-	res.sendFile(__dirname +'/static/home.html');
-	res.sendFile(__dirname +'/static/editprofile.html');
+	res.render("landing");
+	// res.sendFile(__dirname +'/static/home.html');
+	// res.sendFile(__dirname +'/static/editprofile.html');
 });
 
 app.listen(process.env.PORT || 3000, function () {
-	console.log('Example app listening on port 3000!');
+	console.log('App listening on port 3000!');
 });

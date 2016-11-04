@@ -1,24 +1,23 @@
 {
-  "name": "outlts",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "IntroHCI",
+  "version": "0.0.1",
+  "author": "Intro HCI Staff",
+
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryinyang/Outlts.git"
+    "url": "https://github.com/IntroHCI/lab5"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ryinyang/Outlts/issues"
+  "license": "MIT",
+
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
   },
-  "homepage": "https://github.com/ryinyang/Outlts#readme",
   "dependencies": {
-    "ejs": "^2.5.2",
-    "express": "^4.14.0"
-  }
+    "express": "3.x",
+    "express3-handlebars": "*"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }  
 }

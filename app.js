@@ -1,19 +1,77 @@
+
+/**
+ * Module dependencies.
+ */
+
 var express = require('express');
+var http = require('http');
+var path = require('path');
+var handlebars = require('express3-handlebars')
+
+var home = require('./routes/home');
+var feed = require('./routes/feed');
+// Example route
+// var user = require('./routes/user');
+
 var app = express();
-var home = require('./static/js/home');
-// Tell express that the html files are located in a specific directory
-app.set('views', __dirname + '/static');
-// Render the html files with view engine
-app.engine('html', require('ejs').renderFile);
+
+
+// app.engine('html', handlebars({extname:'html'}));
+// app.set('view engine', 'html');
+
+// all environments
+app.set('port', process.env.PORT || 3000);
+app.set('views', path.join(__dirname, 'views'));
+app.engine('html', handlebars({extname:'html'}));
 app.set('view engine', 'html');
-// Tell express where the images are
-app.use(express.static(__dirname + '/static'));
+app.use(express.favicon());
+app.use(express.logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded());
+app.use(express.methodOverride());
+app.use(express.cookieParser('Intro HCI secret key'));
+app.use(express.session());
+app.use(app.router);
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function (req, res) {
-	res.render("landing");
+// development only
+if ('development' == app.get('env')) {
+  app.use(express.errorHandler());
+}
+
+// Add routes here
+app.get('/', function(req,res){
+	res.render("landing")
 });
-app.get('/', home.view);
+app.get('/home', home.view);
+app.get('/profile', function(req,res){
+	res.render("profile")
+});
+app.get('/quests', function(req,res){
+	res.render("quests")
+});
+app.get('/feed', feed.view);
+app.get('/settings', function(req,res){
+	res.render("settings")
+});
+app.get('/login', function(req,res){
+	res.render("login")
+});
+app.get('/upload', function(req,res){
+	res.render("upload")
+});
+app.get('/uploadComplete', function(req,res){
+	res.render("uploadComplete")
+});
+app.get('/newuser', function(req,res){
+	res.render("newuser")
+});
+app.get('/landing', function(req,res){
+	res.render("landing")
+});
+// Example route
+// app.get('/users', user.list);
 
-app.listen(process.env.PORT || 3000, function () {
-	console.log('App listening on port 3000!');
+http.createServer(app).listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
 });

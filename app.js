@@ -10,8 +10,6 @@ app.use(express.static(__dirname + '/static'));
 
 app.get('/', function (req, res) {
 	res.render("landing");
-	// res.sendFile(__dirname +'/static/home.html');
-	// res.sendFile(__dirname +'/static/editprofile.html');
 });
 
 app.listen(process.env.PORT || 3000, function () {

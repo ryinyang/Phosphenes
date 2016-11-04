@@ -9,7 +9,8 @@
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">	
+	<link href="css/overallStyle.css" rel="stylesheet">	
+	<link href="css/profile.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- AWRNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,7 +27,7 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
-				<center><a class="navbar-brand">Outlts</a></center>
+				<a class="navbar-brand">Outlts</a>
         	</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav" id="dropdown-list"> 
@@ -41,39 +42,45 @@
 	</nav>
 	<!-- /navbar -->
 
-<!-- 
-<br><p style="float:left; margin-left:101px;"><a href="home.html"><font size="5">Home</font></a></p>
-<p style="float:right; margin-right:101px;"><a href="editprofile.html"><font size="5">Edit Profile</font></a></p>
- -->
-	<div class="container text-center">
-		<div class="vertical-margin-15">
-			<div class="row ">
-				<h2>KillJoy67</h2>
-			</div>
-			<div class="row">
-				<img class="profile-picture" src="http://theawesomedaily.com/wp-content/uploads/2014/11/mr-bean-historic-portraits-15.jpg">
-			</div>
-			<div class="row">
-				<center><p>Currently on Cloud 2</p></center>
-			</div>
-			<div class="row">
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;">
-						<span class="sr-only">60% Complete</span>
-					</div>
+
+	<div class="container text-center" id="body">
+		<div class="row ">
+			<h2>KillJoy67</h2>
+		</div>
+		<div class="row">
+			<img src="http://theawesomedaily.com/wp-content/uploads/2014/11/mr-bean-historic-portraits-15.jpg" id="profile-picture">
+		</div>
+		<div class="row">
+			<center><p>Level 2</p></center>
+		</div>
+		<div class="row">
+			<div class="progress" id="progress-container">
+				<div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" id="progress-bar">
+					<span class="sr-only">60% Complete</span>
 				</div>
-				<p id="upfloat-meter">Upfloat Meter</p>
 			</div>
-			<div class="row">
-				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Quotes (12/25)</p></div>
-				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Text (4/10)</p></div>
-				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Audio (49/50)</p></div>
-			</div>
-			<div class="row">
-				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Videos (10/10)</p></div>
-				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Gifs (0/5)</p></div>
-				<div class="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Photos (43/100)</p></div>
-			</div>
+		</div>
+ 		<!-- <div class="row">
+			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Quotes (12/25)</p></div>
+			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Text (4/10)</p></div>
+			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Audio (49/50)</p></div>
+		</div>
+		<div class="row">
+			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Videos (10/10)</p></div>
+			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Gifs (0/5)</p></div>
+			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Photos (43/100)</p></div>
+		</div> -->
+	</div>
+
+	<div class="container">
+		<div class="panel-group">
+			<div class="panel panel-default"><div class="panel-heading">Achievements</div></div>
+			<div class="panel panel-default"><div class="panel-body">
+				<div class="panel panel-default"><div class="panel-body">Complete 3 quests today</div></div>
+				<div class="panel panel-default"><div class="panel-body">Complete at least 1 quest a day for 3 days</div></div>
+				<div class="panel panel-default"><div class="panel-body">Complete at least 1 quest a day for 7 days</div></div>
+				<div class="panel panel-default"><div class="panel-body">Complete 3 quests a day for 7 days</div></div>
+			</div></div>
 		</div>
 	</div>
 

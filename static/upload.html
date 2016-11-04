@@ -12,6 +12,7 @@
 
 	<!-- Custom sytlesheet -->
 	<link href="css/style.css" rel="stylesheet">
+	<link href="css/upload.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -23,6 +24,7 @@
 	<!-- Custom scripts -->
 	<script src="js/handlingFileInput.js"></script>
 	<script src="js/uploadSupportDetection.js"></script>
+	<script src="js/test.js"></script>
 
 </head>
 <body>
@@ -48,15 +50,10 @@
 	</nav>
 	<!-- /navbar -->
 
-
-
-	<div class="container">
-		<h2 style="margin-top: 75px">Upload complete!</h2>
-	</div>
-
-	<div class="container">
-		<button type="button" class="btn btn-default" onclick="uploadSupportDetection()">Upload</button>
+	<div class="container" id="upload-box">
 		<input id="file" type="file" accept="image/*">
+		<button type="button" class="btn btn-default" onclick="test()">Upload</button>
+
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

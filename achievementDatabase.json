@@ -3,31 +3,38 @@
 		[
 			{
 				"title": "Baby Steps",
-				"description": "Complete your first quest"
+				"description": "Complete your first quest",
+				"id": "1"
 			},
 			{
 				"title": "Day One",
-				"description": "Finish all 3 daily quests"
+				"description": "Finish all 3 daily quests",
+				"id": "2"
 			},
 			{
 				"title": "Practice, practice, practice",
-				"description": "Complete at least 1 quest everyday for 3 days"
+				"description": "Complete at least 1 quest everyday for 3 days",
+				"id": "3"
 			},
 			{
 				"title": "A Weak Streak",
-				"description": "Complete at least 1 quest everyday for a week"
+				"description": "Complete at least 1 quest everyday for a week",
+				"id": "4"
 			},
 			{
 				"title": "Now that's a real streak",
-				"description": "Complete all daily quests everyday for a week"
+				"description": "Complete all daily quests everyday for a week",
+				"id": "5"
 			},
 			{
 				"title": "When in doubt, draw it out",
-				"description": "Complete a quest after midnight"
+				"description": "Complete a quest after midnight",
+				"id": "6"
 			},
 			{
 				"title": "Up up and up",
-				"description": "Get an upvote for your of your artworks"
+				"description": "Get an upvote for your of your artworks",
+				"id": "7"
 			}
 		]
 }

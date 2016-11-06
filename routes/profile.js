@@ -1,13 +1,12 @@
 var posts = require("../achievementDatabase.json");
+var currIndex = 0;
+
 
 exports.view = function(req, res) {
 	res.render('profile', posts);
 };
 
-$('#achievement-btn').click(achievementPopup);
-function achievementPopup(event) {
-	console.log("hi");
-}
+
 
 // $('#achievement1').click(appendPopup);
 // function appendPopup(event) {

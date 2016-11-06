@@ -6,10 +6,11 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var home = require('./routes/home');
 var feed = require('./routes/feed');
+var profile = require('./routes/profile');
 // Example route
 // var user = require('./routes/user');
 
@@ -44,9 +45,7 @@ app.get('/', function(req,res){
 	res.render("landing")
 });
 app.get('/home', home.view);
-app.get('/profile', function(req,res){
-	res.render("profile")
-});
+app.get('/profile', profile.view);
 app.get('/quests', function(req,res){
 	res.render("quests")
 });

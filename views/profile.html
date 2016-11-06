@@ -11,7 +11,6 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/overallStyle.css" rel="stylesheet">	
 	<link href="css/profile.css" rel="stylesheet">
-
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- AWRNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -59,27 +58,29 @@
 				</div>
 			</div>
 		</div>
- 		<!-- <div class="row">
-			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Quotes (12/25)</p></div>
-			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Text (4/10)</p></div>
-			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Audio (49/50)</p></div>
-		</div>
-		<div class="row">
-			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Videos (10/10)</p></div>
-			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Gifs (0/5)</p></div>
-			<div id="cloud"><span class="glyphicon glyphicon-cloud"></span><p class="cloud-label">Photos (43/100)</p></div>
-		</div> -->
 	</div>
 
 	<div class="container">
 		<div class="panel-group">
 			<div class="panel panel-default"><div class="panel-heading">Achievements</div></div>
 			<div class="panel panel-default"><div class="panel-body">
-				<div class="panel panel-default"><div class="panel-body">Complete 3 quests today</div></div>
-				<div class="panel panel-default"><div class="panel-body">Complete at least 1 quest a day for 3 days</div></div>
+				{{#each achievements}}
+					<div class="panel panel-default"><div class="panel-body" id="achievement-btn"><a href="#popup">{{title}}</a></div></div>
+				{{/each}}
+				<!-- <div class="panel panel-default"><div class="panel-body">Complete at least 1 quest a day for 3 days</div></div>
 				<div class="panel panel-default"><div class="panel-body">Complete at least 1 quest a day for 7 days</div></div>
-				<div class="panel panel-default"><div class="panel-body">Complete 3 quests a day for 7 days</div></div>
+				<div class="panel panel-default"><div class="panel-body">Complete 3 quests a day for 7 days</div></div> -->
 			</div></div>
+		</div>
+	</div>
+
+ 	<div id="popup1" class="overlay">
+		<div class="popup">
+			<h2>{{title}}</h2>
+			<a class="close" href="#">&times;</a>
+			<div class="content">
+				{{description}}
+			</div>
 		</div>
 	</div>
 

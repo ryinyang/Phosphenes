@@ -1,0 +1,33 @@
+{
+	"achievements":
+		[
+			{
+				"title": "Baby Steps",
+				"description": "Complete your first quest"
+			},
+			{
+				"title": "Day One",
+				"description": "Finish all 3 daily quests"
+			},
+			{
+				"title": "Practice, practice, practice",
+				"description": "Complete at least 1 quest everyday for 3 days"
+			},
+			{
+				"title": "A Weak Streak",
+				"description": "Complete at least 1 quest everyday for a week"
+			},
+			{
+				"title": "Now that's a real streak",
+				"description": "Complete all daily quests everyday for a week"
+			},
+			{
+				"title": "When in doubt, draw it out",
+				"description": "Complete a quest after midnight"
+			},
+			{
+				"title": "Up up and up",
+				"description": "Get an upvote for your of your artworks"
+			}
+		]
+}

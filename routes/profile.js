@@ -4,7 +4,7 @@ exports.view = function(req, res) {
 	res.render('profile', posts);
 };
 
-// $('#achievement-btn').click(achievementPopup);
+$('#achievement-btn').click(achievementPopup);
 function achievementPopup(event) {
 	console.log("hi");
 }

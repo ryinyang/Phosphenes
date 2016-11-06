@@ -1,9 +1,9 @@
-var posts = require("../achievementDatabase.json");
+var achievements = require("../achievementDatabase.json");
 var currIndex = 0;
 
 
 exports.view = function(req, res) {
-	res.render('profile', posts);
+	res.render('profile', achievements);
 };
 
 

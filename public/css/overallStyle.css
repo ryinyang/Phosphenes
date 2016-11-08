@@ -24,3 +24,11 @@ a {
 #body {
 	margin-top: 75px;
 }
+
+button:focus {
+	background: var(--main-color) !important;
+}
+
+*:not(dropdown-list) {
+	
+}

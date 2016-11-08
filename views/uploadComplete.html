@@ -34,13 +34,13 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="menu-btn">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
-				<a class="navbar-brand" href="/home">Outlts</a>
+				<a class="navbar-brand" href="/home">Phosphenes</a>
         	</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav" id="dropdown-list"> 
+					<li><a href="/home">Home</a></li>
 					<li><a href="/profile">Profile</a></li>
-					<!-- <li><a href="/quests">Quests</a></li> -->
-					<li><a href="/feed">Feed</a></li>
+					<li><a href="/quests">Quests</a></li>
 					<!-- <li><a href="/settings">Settings</a></li> -->
 					<li><a href="/landing">Sign Out</a></li>
 				</ul>
@@ -51,6 +51,7 @@
 
 	<div class="container" id="body">
 		<h2>Upload Successful!</h2>
+		<button type="button" class="btn btn-lg btn-block" onclick="window.location.href = '/myUploads'">My Uploads</button>
 		<button type="button" class="btn btn-lg btn-block" onclick="window.location.href = '/home'">Back to home</button>
 	</div>
 

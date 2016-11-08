@@ -1,18 +1,31 @@
+:root {
+	--main-color: #94c2db;
+	--text-color: white;
+}
+
 #appname {
 	color: white;
-	margin-top: 10%;
+	margin-top: 20%;
 }
 
 #login-btn {
 	background-color: white;
-	color: #94c2db;
+	color: var(--main-color);
 }
 
 #new-user-btn {
 	background-color: white;
-	color: #94c2db;
+	color: var(--main-color);
 }
 
 #btn-container {
-	margin-top: 40%;
+	margin-top: 10%;
+}
+
+body {
+	background-color: var(--main-color);
+/*	background-size: 100%;
+	background-position: 0% -200%;
+	background-color: var(--main-color);
+	background-repeat: no-repeat;*/
 }

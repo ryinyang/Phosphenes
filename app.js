@@ -11,6 +11,7 @@ var handlebars = require('express3-handlebars');
 var home = require('./routes/home');
 var feed = require('./routes/feed');
 var profile = require('./routes/profile');
+var quests = require('./routes/quests');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,9 +47,7 @@ app.get('/', function(req,res){
 });
 app.get('/home', home.view);
 app.get('/profile', profile.view);
-app.get('/quests', function(req,res){
-	res.render("quests")
-});
+app.get('/quests', quests.view);
 app.get('/feed', feed.view);
 app.get('/settings', function(req,res){
 	res.render("settings")

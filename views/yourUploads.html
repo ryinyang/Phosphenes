@@ -8,7 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/overallStyle.css" rel="stylesheet">
+	<link href="css/yourUploads.css" rel="stylesheet">
 </head>
 
 <body>
@@ -34,7 +35,18 @@
 	</nav>
 	<!-- /navbar -->
 
-	<p style="margin-top:100px">Settings page</p>
+	<div class="container" id="body">
+		{{#each posts}}
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{user}}</h3>
+			</div>
+			<div class="panel-body">
+				<img class="img-responsive" src={{img}}></img>
+			</div>
+		</div>
+		{{/each}}
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

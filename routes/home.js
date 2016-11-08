@@ -1,5 +1,5 @@
-var quests = require('../questDatabase.json');
+var posts = require('../feed.json');
 
 exports.view = function(req, res) {
-	res.render('home', quests);
+	res.render('home', posts);
 };

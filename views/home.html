@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Outlts</title>
+	<title>Phosphenes</title>
 	<meta charset="utf-8">
 	<!-- Makes page responsive to mobile devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,13 +20,13 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="menu-btn">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
-				<a class="navbar-brand" href="/home">Outlts</a>
+				<a class="navbar-brand" href="/home">Phosphenes</a>
         	</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav" id="dropdown-list"> 
+					<li><a href="/home">Home</a></li>
 					<li><a href="/profile">Profile</a></li>
-					<!-- <li><a href="/quests">Quests</a></li> -->
-					<li><a href="/feed">Feed</a></li>
+					<li><a href="/quests">Quests</a></li>
 					<!-- <li><a href="/settings">Settings</a></li> -->
 					<li><a href="/landing">Sign Out</a></li>
 				</ul>
@@ -36,28 +36,16 @@
 	<!-- /navbar -->
 
 	<div class="container" id="body">
+		{{#each posts}}
 		<div class="panel panel-default">
-			<div class="panel-heading" id="panel-heading1">
-				<h3>Daily Quests</h3>
+			<div class="panel-heading">
+				<h3 class="panel-title">{{user}}</h3>
 			</div>
 			<div class="panel-body">
-				<a href="/upload"><div class="panel panel-default">
-					<div class="panel-body">
-						{{quests.0.title}}
-					</div>
-				</div></a>
-				<a href="/upload"><div class="panel panel-default">
-					<div class="panel-body">
-						{{quests.1.title}}
-					</div>
-				</div></a>
-				<a href="/upload"><div class="panel panel-default">
-					<div class="panel-body">
-						{{quests.2.title}}
-					</div>
-				</div></a>			
+				<img class="img-responsive" src={{img}}></img>
 			</div>
 		</div>
+		{{/each}}
 	</div>
 
 

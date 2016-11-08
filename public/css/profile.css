@@ -96,7 +96,7 @@
 }
 
 .popup .close:hover {
-	color: #06D85F;
+	color: red;
 }
 
 .popup .content {

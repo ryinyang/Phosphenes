@@ -26,13 +26,13 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="menu-btn">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
-				<a class="navbar-brand" href="/home">Outlts</a>
+				<a class="navbar-brand" href="/home">Phosphenes</a>
         	</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav" id="dropdown-list"> 
+					<li><a href="/home">Home</a></li>
 					<li><a href="/profile">Profile</a></li>
-					<!-- <li><a href="/quests">Quests</a></li> -->
-					<li><a href="/feed">Feed</a></li>
+					<li><a href="/quests">Quests</a></li>
 					<!-- <li><a href="/settings">Settings</a></li> -->
 					<li><a href="/landing">Sign Out</a></li>
 				</ul>
@@ -65,7 +65,7 @@
 			<div class="panel panel-default"><div class="panel-heading">Achievements</div></div>
 			<div class="panel panel-default"><div class="panel-body">
 				{{#each achievements}}
-					<div class="panel panel-default"><div class="panel-body" id="achievement-btn"><a href="#{{id}}">{{title}}</a></div></div>
+					<a href="#{{id}}"><div class="panel panel-default"><div class="panel-body" id="achievement-btn">{{title}}</div></div></a>
 				 	<div id="{{id}}" class="overlay">
 						<div class="popup">
 							<h3>{{title}}</h3>
@@ -76,9 +76,6 @@
 						</div>
 					</div>
 				{{/each}}
-				<!-- <div class="panel panel-default"><div class="panel-body">Complete at least 1 quest a day for 3 days</div></div>
-				<div class="panel panel-default"><div class="panel-body">Complete at least 1 quest a day for 7 days</div></div>
-				<div class="panel panel-default"><div class="panel-body">Complete 3 quests a day for 7 days</div></div> -->
 			</div></div>
 		</div>
 	</div>

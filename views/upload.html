@@ -11,7 +11,7 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom sytlesheet -->
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/overallStyle.css" rel="stylesheet">
 	<link href="css/upload.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -21,9 +21,6 @@
   		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- Custom scripts -->
-	<script src="js/handlingFileInput.js"></script>
-	<script src="js/uploadSupportDetection.js"></script>
 
 </head>
 <body>
@@ -34,13 +31,13 @@
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="menu-btn">
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
-				<a class="navbar-brand" href="/home">Outlts</a>
+				<a class="navbar-brand" href="/home">Phosphenes</a>
         	</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav" id="dropdown-list"> 
+					<li><a href="/home">Home</a></li>
 					<li><a href="/profile">Profile</a></li>
-					<!-- <li><a href="/quests">Quests</a></li> -->
-					<li><a href="/feed">Feed</a></li>
+					<li><a href="/quests">Quests</a></li>
 					<!-- <li><a href="/settings">Settings</a></li> -->
 					<li><a href="/landing">Sign Out</a></li>
 				</ul>
@@ -50,13 +47,15 @@
 	<!-- /navbar -->
 
 	<div class="container" id="upload-box">
-		<input id="file" type="file" accept="image/*">
-		<button type="button" class="btn btn-lg btn-block" onclick="window.location.href ='/uploadComplete'" id="upload-btn">Upload</button>
+		<button type="button" class="btn btn-lg btn-block"><input id="file" type="hidden" accept="image/*" style="font-size: 1em">Poop</button>
+		<button type="button" class="btn btn-lg btn-block" onclick="window.location.href = '/uploadComplete';" id="upload-btn">Upload</button>
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/navbar.js"></script>
 </body>
 </html>

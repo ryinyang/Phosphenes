@@ -43,29 +43,32 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', function(req,res){
-	res.render("landing")
+	res.render('landing')
 });
 app.get('/home', home.view);
 app.get('/profile', profile.view);
+app.get('/myUploads', function(req,res){
+	res.render('myUploads')
+});
 app.get('/quests', quests.view);
 app.get('/feed', feed.view);
 app.get('/settings', function(req,res){
-	res.render("settings")
+	res.render('settings')
 });
 app.get('/login', function(req,res){
-	res.render("login")
+	res.render('login')
 });
 app.get('/upload', function(req,res){
-	res.render("upload")
+	res.render('upload')
 });
 app.get('/uploadComplete', function(req,res){
-	res.render("uploadComplete")
+	res.render('uploadComplete')
 });
 app.get('/newuser', function(req,res){
-	res.render("newuser")
+	res.render('newuser')
 });
 app.get('/landing', function(req,res){
-	res.render("landing")
+	res.render('landing')
 });
 // Example route
 // app.get('/users', user.list);

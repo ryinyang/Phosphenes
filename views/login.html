@@ -48,11 +48,13 @@
 		<h3>Welcome to Phosphenes!</h3>
 	</div>
 
+<!-- <form id="myform">
 	<div class="container" id="login-box">
 		<div class="container" id="username-input">
+
 			<div class="input-group">
 				<span class="input-group-addon" id="basic-addon1">Username</span>
-				<input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+				<input id="username-input" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
 			</div>
 			<div class="input-group" id="password-input">
 				<span class="input-group-addon" id="basic-addon1">Password</span>
@@ -60,14 +62,30 @@
 			</div>
 		</div>
 		<div class="container">
-			<button class="btn btn-lg btn-block" id="login-btn" onclick="window.location.href ='/home'">Login</button>
+			<button class="btn btn-lg btn-block" id="login-btn">Login</button>
 		</div>
 	</div>
+</form> -->
 
+	<div class="container">
+		<form>
+			<div class="container">
+				<input id="uname-input" name="uname" type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+				<input id="pword-input" name="pword" type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+			</div>
+		</form>
+		<div class="container">
+			<button id="login-btn" class="btn btn-lg">Login</button>
+			<button id="back-btn" class="btn btn-lg">Back</button>
+		</div>
+	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/login.json"></script>
+	<script src="js/login.js"></script>
 </body>
 </html>

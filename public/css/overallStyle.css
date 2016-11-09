@@ -22,13 +22,9 @@ a {
 }
 
 #body {
-	margin-top: 75px;
+	margin-top: 70px;
 }
 
 button:focus {
 	background: var(--main-color) !important;
-}
-
-*:not(dropdown-list) {
-	
 }

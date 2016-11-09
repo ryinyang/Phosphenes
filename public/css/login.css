@@ -11,9 +11,17 @@
 }
 
 #login-btn {
+	float: right;
 	margin-top: 20px;
 	background-color: #94c2db;
 	color: white;
+	width: 47%;
 }
 
-#basic
+#back-btn {
+	float: left;
+	margin-top: 20px;
+	background-color: #94c2db;
+	color: white;
+	width: 47%;
+}

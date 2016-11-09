@@ -24,27 +24,30 @@
 
 </head>
 <body>
-	<!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container" id="main-navbar">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid" id="main-navbar">
+			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" id="menu-btn">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" id="menu-btn">
+					<span class="sr-only">Toggle navigation</span>
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
 				<a class="navbar-brand" href="/home">Phosphenes</a>
-        	</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav" id="dropdown-list"> 
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav" id="dropdown-list">
+					<!-- <li class="active"><a href="#">Link<span class="sr-only">(current)</span></a></li> -->
 					<li><a href="/home">Home</a></li>
 					<li><a href="/profile">Profile</a></li>
+					<li><a href="/myUploads">My Uploads</a></li>
 					<li><a href="/quests">Quests</a></li>
 					<!-- <li><a href="/settings">Settings</a></li> -->
 					<li><a href="/landing">Sign Out</a></li>
 				</ul>
-			</div><!--/.nav-collapse -->
-		</div>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
 	</nav>
-	<!-- /navbar -->
 
 	<div class="container" id="upload-box">
 		<input id="file" type="file" accept="image/*" style="font-size: 1em">

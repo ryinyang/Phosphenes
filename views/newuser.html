@@ -71,18 +71,22 @@
 	
 	<div class="container" id="body">
 		<form>
-			<div class="form-group">
+<!-- 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address</label>
 				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-			</div>
+			</div> -->
 			<div class="form-group">
 				<label for="exampleInputPassword1">Username</label>
-				<input type="text" class="form-control" placeholder="Username">
+				<input id="uname-input" type="text" class="form-control" placeholder="Username">
 			</div>
 			<div class="form-group">
 				<label for="exampleInputPassword1">Password</label>
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				<input id="pword-input1" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Confirm Password</label>
+				<input id="pword-input2" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 			</div>
 <!-- 			<div class="form-group">
 				<label for="exampleInputPassword1">Please confirm your password</label>
@@ -93,12 +97,16 @@
 	</div>
 
 	<div class="container">
-		<button class="btn btn-lg btn-block" id="login-btn" onclick="window.location.href ='/home'">Create Account</button>
+		<button id="create-btn" class="btn btn-lg">Create Account</button>
+		<button id="back-btn" class="btn btn-lg">Back</button>
+
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/login.js"></script>
 </body>
 </html>

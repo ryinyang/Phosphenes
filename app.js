@@ -12,6 +12,8 @@ var home = require('./routes/home');
 var feed = require('./routes/feed');
 var profile = require('./routes/profile');
 var quests = require('./routes/quests');
+var myUploads = require('./routes/myUploads');
+var upload = require('./routes/upload');
 // Example route
 // var user = require('./routes/user');
 
@@ -47,9 +49,7 @@ app.get('/', function(req,res){
 });
 app.get('/home', home.view);
 app.get('/profile', profile.view);
-app.get('/myUploads', function(req,res){
-	res.render('myUploads')
-});
+app.get('/myUploads', myUploads.view);
 app.get('/quests', quests.view);
 app.get('/feed', feed.view);
 app.get('/settings', function(req,res){
@@ -58,9 +58,7 @@ app.get('/settings', function(req,res){
 app.get('/login', function(req,res){
 	res.render('login')
 });
-app.get('/upload', function(req,res){
-	res.render('upload')
-});
+app.get('/upload', upload.view);
 app.get('/uploadComplete', function(req,res){
 	res.render('uploadComplete')
 });

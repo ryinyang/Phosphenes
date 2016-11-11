@@ -25,7 +25,7 @@ function checkLogin(){
 			return;
 		}
 	};
-	alert("You've entered the incorrect uname or password.");
+	alert("You've entered the incorrect username or password.");
 	console.log(loginDatabase.responseJSON);
 }
 
@@ -50,6 +50,12 @@ function createAccount(){
 
 	for (var i = data.length - 1; i >= 0; i--) {
 		// Check for duplicate username
+		if (uname == "") {
+			errMsg += "You forgot to choose a username."
+		}
+		if (pword1 == "" || pword2 == "") {
+			errMsg += "You left out one of the password fields."
+		}
 		if (data[i].uname == uname) {
 			errMsg += "This username is taken.\n";
 		}

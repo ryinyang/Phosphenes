@@ -14,6 +14,14 @@ var profile = require('./routes/profile');
 var quests = require('./routes/quests');
 var myUploads = require('./routes/myUploads');
 var upload = require('./routes/upload');
+
+var cloudinary = require('cloudinary');
+cloudinary.config({ 
+  cloud_name: 'dpt28q6uz', 
+  api_key: '923964177893211', 
+  api_secret: 'VR4fQiZpYJylBva9vEGBEwuv7JM' 
+});
+
 // Example route
 // var user = require('./routes/user');
 

@@ -10,6 +10,7 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/overallStyle.css" rel="stylesheet">
 	<link href="css/home.css" rel="stylesheet">
+	<link href="css/upvoteStyle.css" rel="stylesheet">
 </head>
 
 <body>
@@ -53,6 +54,10 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 				<h3 class="panel-title">{{user}}</h3>
+				<div class="box" style="float: right;">
+					<input id="{{postid}}" value="0"/>
+					<button id="up" onclick="modify_qty({{postid}})">Upvote</button>
+				</div>
 			</div>
 			<div class="panel-body">
 				<center><img class="img-responsive" src={{img}}></img></center>
@@ -66,6 +71,6 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/home.js"></script>
-
+	<script src="js/upvoteScript.js"></script>
 </body>
 </html>

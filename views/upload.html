@@ -65,8 +65,10 @@
  	<div class="container" id="upload-box">
  		<h3> Share. </h3>
 		<h4> Take a picture from your device and upload it.</h4>
-		<input id="file-input" type="file" accept="image/*" style="font-size: 1em">
-		<button type="button" class="btn btn-lg btn-block" id="upload-btn">Upload</button>
+		<form method="post" action="/upload/new">
+			<input id="file-input" type="file" accept="image/*" style="font-size: 1em">
+			<input type="submit" class="btn btn-lg btn-block" id="upload-btn">Upload</input>
+		</form>
 	</div>
 
 	<div class="container" id="gallery"></div>

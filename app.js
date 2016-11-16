@@ -7,6 +7,8 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var fs = require('file-system');
+var mongoose = require('mongoose');
 
 var home = require('./routes/home');
 var feed = require('./routes/feed');
@@ -23,7 +25,6 @@ var app = express();
 
 // app.engine('html', handlebars({extname:'html'}));
 // app.set('view engine', 'html');
-//poop
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
@@ -69,9 +70,56 @@ app.get('/newuser', function(req,res){
 app.get('/landing', function(req,res){
 	res.render('landing')
 });
+app.post('/upload/new', upload.uploadPicture);
+// app.post('/upload/new', uploadHelper());
 // Example route
 // app.get('/users', user.list);
+
+
+
+
+var imgPath = 'OutltsLogo.png';
+
+var schema = ({
+	img: {data: Buffer, contentType: String}
+});
+
+var model = mongoose.model('model', schema);
+
+mongoose.connection.on('open', function(){
+	console.log('mongo is open');
+	var newPic = new model;
+	newPic.img.data = fs.readFileSync(imgPath);
+	newPic.contentType = 'image/png';
+	newPic.save(function (err, newPic) {
+		if (err) console.log(err);
+		console.log('picture saved to mongo');
+
+	});
+});
+
+
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+// function uploadHelper (req, res) {
+// 	// Get the temporary location of the file
+//     var tmp_path = req.files.thumbnail.path;
+//     // Set where the file should actually exists - in this case it is in the "images" directory.
+//     target_path = '/tmp/' + req.files.thumbnail.name;
+//     // Move the file from the temporary location to the intended location
+//     fs.rename(tmp_path, target_path, function(err) {
+//         if (err)
+//             throw err;
+//         // Delete the temporary file, so that the explicitly set temporary upload dir does not get filled with unwanted files.
+//         fs.unlink(tmp_path, function() {
+//             if (err)
+//                 throw err;
+//             //
+//         });
+//     });
+// }
+

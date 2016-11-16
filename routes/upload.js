@@ -6,4 +6,5 @@ exports.view = function(req, res) {
 
 exports.uploadPicture = function(req, res) {
     console.log(req.files);
+    
 }

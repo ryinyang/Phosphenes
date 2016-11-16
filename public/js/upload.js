@@ -67,6 +67,6 @@ function initPage() {
         console.log("upload button clicked.");
         // Upload picture somehow
         $.post("/upload/new");
-    })
+    });
 }
 

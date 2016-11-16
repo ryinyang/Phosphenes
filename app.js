@@ -78,25 +78,25 @@ app.post('/upload/new', upload.uploadPicture);
 
 
 
-var imgPath = 'OutltsLogo.png';
+// var imgPath = 'OutltsLogo.png';
 
-var schema = ({
-	img: {data: Buffer, contentType: String}
-});
+// var schema = ({
+// 	img: {data: Buffer, contentType: String}
+// });
 
-var model = mongoose.model('model', schema);
+// var model = mongoose.model('model', schema);
 
-mongoose.connection.on('open', function(){
-	console.log('mongo is open');
-	var newPic = new model;
-	newPic.img.data = fs.readFileSync(imgPath);
-	newPic.contentType = 'image/png';
-	newPic.save(function (err, newPic) {
-		if (err) console.log(err);
-		console.log('picture saved to mongo');
+// mongoose.connection.on('open', function(){
+// 	console.log('mongo is open');
+// 	var newPic = new model;
+// 	newPic.img.data = fs.readFileSync(imgPath);
+// 	newPic.contentType = 'image/png';
+// 	newPic.save(function (err, newPic) {
+// 		if (err) console.log(err);
+// 		console.log('picture saved to mongo');
 
-	});
-});
+// 	});
+// });
 
 
 

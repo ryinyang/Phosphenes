@@ -7,7 +7,6 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
-var mongoose = require('mongoose');
 
 /* For AB Testing */
 var home2 = require('./routes/home2');

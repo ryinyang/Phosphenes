@@ -1,15 +1,24 @@
+var fs = require('fs');
+var posts = require('../feed.json');
+
 exports.view = function(req, res) {
 	res.render('newUser');
 }
 
-exports.createAccount = function(req, res) {
-	// var uname = $("#uname-input").val();
-	// var pword1 = $("#pword-input1").val();
-	// var pword2 = $("#pword-input2").val();
-	var user = "{uname: " + req.query.username + "}," +
-			   "{pword: " + req.query.password1 + "}";
+exports.createUser = function(req, res) {
+	var uname = req.body.username;
+	var pword = req.body.password1;
+	var file = fs.readFileSync("login.json");
+	var data = JSON.parse(file);
 
-	console.log(user);
+	data.users.push({
+		"uname": uname,
+		"pword": pword
+	});
 
-	
+	fs.writeFile('login.json', JSON.stringify(data), function (err) {
+		console.log(err);
+	});
+
+	res.render('home', posts);
 }

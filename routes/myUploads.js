@@ -1,5 +1,3 @@
-// var myUploads = require('../myUploads.json');
-
 var fs = require('fs');
 
 exports.view = function(req, res) {

@@ -34,7 +34,7 @@
 				<a class="navbar-brand" href="/home">Phosphenes</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse">
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav" id="dropdown-list">
 					<!-- <li class="active"><a href="#">Link<span class="sr-only">(current)</span></a></li> -->
 					<li><a href="/home">Home</a></li>
@@ -53,36 +53,9 @@
 		<h3> Share. </h3>
 		<h4> Take a picture from your device and upload it.</h4>
 		<form id="myform" method="post" role="form" action="/uploadComplete">
-			<!-- <input id="file-input" type="file" accept="image/*" style="font-size: 1em"> -->
-
 			<input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();" />
 			<input id="imgtest" name="im" style="display: none"></div>
-			<input type="submit" class="btn btn-lg btn-block" id="upload-btn">Upload</input>
-
-			<script type='text/javascript'>
-			function encodeImageFileAsURL() {
-
-				var filesSelected = document.getElementById("inputFileToLoad").files;
-				if (filesSelected.length > 0) {
-					var fileToLoad = filesSelected[0];
-
-					var fileReader = new FileReader();
-
-					fileReader.onload = function(fileLoadedEvent) {
-						var srcData = fileLoadedEvent.target.result; // <--- data: base64
-
-						// console.log(String(srcData));
-
-						document.getElementById("imgtest").value = String(srcData);
-						console.log(document.getElementById("imgtest").value);
-						// alert("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
-						// console.log("Converted Base64 version is " + document.getElementById("imgTest").innerHTML);
-					}
-				fileReader.readAsDataURL(fileToLoad);
-				}
-			}
-			</script>
-
+			<input type="submit" class="btn btn-lg btn-block" id="upload-btn">
 		</form>
 	</div>
 

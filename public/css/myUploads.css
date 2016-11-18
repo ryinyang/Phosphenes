@@ -1,0 +1,13 @@
+:root {
+	--main-color: #94c2db;
+	--text-color: white;
+}
+
+.panel-heading {
+	background: var(--main-color) !important;
+	color: var(--text-color) !important;
+}
+
+.panel {
+	box-shadow: 5px 5px 10px #D3D3D3;
+}

@@ -26,20 +26,8 @@
     <nav class="navbar navbar-default navbar-fixed-top">
 		<div class="container" id="main-navbar">
 			<div class="navbar-header">
-				<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="glyphicon glyphicon-menu-hamburger"></span>
-				</button> -->
 				<center><a class="navbar-brand">Phosphenes</a></center>
         	</div>
-			<!-- <div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav" id="dropdown-list"> 
-					<li><a href="profile.html">Profile</a></li>
-					<li><a href="quests.html">Quests</a></li>
-					<li><a href="feed.html">Feed</a></li>
-					<li><a href="settings.html">Settings</a></li>
-					<li><a href="landing.html">Sign Out</a></li>
-				</ul>
-			</div> -->
 		</div>
 	</nav>
 	<!-- /navbar -->
@@ -70,7 +58,7 @@
 	</div> -->
 	
 	<div class="container" id="body">
-		<form method="post" action="/newUser/createAccount">
+		<form method="post" action="/home">
 <!-- 			<div class="form-group">
 				<label for="exampleInputEmail1">Email address</label>
 				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -79,28 +67,20 @@
 			<div class="form-group">
 				<label for="exampleInputPassword1">Username</label>
 				<input name="username" id="uname-input" type="text" class="form-control" placeholder="Username">
+				<div id="usernameAvailability"></div>
 			</div>
 			<div class="form-group">
-				<label for="exampleInputPassword1">Password</label>
-				<input name="password1" id="pword-input1" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				<label for="pword-input1">Password</label>
+				<input name="password1" id="pword-input1" type="password" class="form-control" placeholder="Password">
 			</div>
 			<div class="form-group">
-				<label for="exampleInputPassword1">Confirm Password</label>
-				<input name="password2" id="pword-input2" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				<label for="pword-input2">Confirm Password</label>
+				<input name="password2" id="pword-input2" type="password" class="form-control" placeholder="Confirm Password">
+				<div id="matchPasswords"></div>
 			</div>
-<!-- 			<div class="form-group">
-				<label for="exampleInputPassword1">Please confirm your password</label>
-				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-			</div> -->
 			<input id="submit-btn" type="submit" class="btn btn-lg" value="Create Account"/>
 		</form>
 	</div>
-
-	<!-- <div class="container">
-		<button id="create-btn" class="btn btn-lg">Create Account</button>
-		<button id="back-btn" class="btn btn-lg">Back</button>
-
-	</div> -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -108,5 +88,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="js/login.js"></script>
+	<script src="js/login.json"></script>
+	<script src="js/newUser.js"></script>
 </body>
 </html>

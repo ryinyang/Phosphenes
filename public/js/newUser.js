@@ -1,4 +1,5 @@
-var loginDatabase = jQuery.getJSON("js/login.json");
+// var loginDatabase = jQuery.getJSON("js/login.json");
+// var fs = require('fs');
 
 // $(document).ready(function(){
 // 	$("#create-btn").click(createAccount);
@@ -41,33 +42,37 @@ var loginDatabase = jQuery.getJSON("js/login.json");
 // }
 
 $(document).ready(function() {
-	initPage();
-	$("#submit-btn").click(send)
+	$("#pword-input1, #pword-input2").keyup(verifyPasswords);
+	// $("#uname-input").keyup(checkUsernameAvailability);
 });
 
-function initPage() {
-	
-}
+// function checkUsernameAvailability() {
+// 	var file = $.getJSON("js/login.json");
+// 	var data = file.users;
+// 	var uname = $("#uname-input");
 
-exports.view = function(req, res) {
-	res.render('newUser');
-}
+// 	console.log(file.users);
 
-exports.createAccount = function(req, res) {
-	console.log(req.query);
-}
+// 	for (var i = data.length - 1; i >= 0; i--) {
+// 		if (uname == file.responseJSON[i].uname) {
+// 			$("#usernameAvailability").html("That username is already taken!");
+// 		} else {
+// 			$("#usernameAvailability").html("");
+// 		}
+// 	};
+// }
 
-function send() {
-	var uname = $("#uname-input").val();
-	var pword1 = $("#pword-input1").val();
-	var pword2 = $("#pword-input2").val();
+function verifyPasswords() {
+	var p1 = $("#pword-input1").val();
+	var p2 = $("#pword-input2").val();
 
-	$.post('/newUser/createAccount', 
-	{
-		"uname": uname,
-		"pword": pword1
-	}, 
-	callbackFn());
+	console.log('verify');
+
+	if (p1 != p2) {
+		$("#matchPasswords").html("Passwords don't match");
+	} else {
+		$("#matchPasswords").html("");
+	}
 }
 
 function callbackFn() {

@@ -7,16 +7,23 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
-var fs = require('file-system');
 var mongoose = require('mongoose');
 
-var home = require('./routes/home');
+/* For AB Testing */
+var home2 = require('./routes/home2');
+var myUploads2 = require('./routes/myUploads2');
+var profile2 = require('./routes/profile2');
+var quests2 = require('./routes/quests2');
+var upload2 = require('./routes/upload2');
+
 var feed = require('./routes/feed');
+var home = require('./routes/home');
+var login = require('./routes/login');
+var myUploads = require('./routes/myUploads');
+var newUser = require('./routes/newUser');
 var profile = require('./routes/profile');
 var quests = require('./routes/quests');
-var myUploads = require('./routes/myUploads');
 var upload = require('./routes/upload');
-
 // Example route
 // var user = require('./routes/user');
 
@@ -50,33 +57,34 @@ app.get('/', function(req,res){
 	res.render('landing')
 });
 app.get('/home', home.view);
+app.get('/feed', feed.view);
+app.get('/login', login.view);
 app.get('/profile', profile.view);
 app.get('/myUploads', myUploads.view);
 app.get('/quests', quests.view);
-app.get('/feed', feed.view);
+app.get('/upload', upload.view);
 app.get('/settings', function(req,res){
 	res.render('settings')
 });
-app.get('/login', function(req,res){
-	res.render('login')
-});
-app.get('/upload', upload.view);
-app.get('/uploadComplete', function(req,res){
-	res.render('uploadComplete')
-});
-app.get('/newuser', function(req,res){
-	res.render('newuser')
-});
+app.get('/uploadComplete', upload.uploadPicture);
+app.get('/newUser', newUser.view);
+// app.get('/newUser/createAccount', newUser.createAccount);
+app.post('/newUser/createAccount', newUser.createAccount);
 app.get('/landing', function(req,res){
 	res.render('landing')
 });
-app.post('/upload/new', upload.uploadPicture);
+// app.get('/upload/new', upload.uploadPicture);
 // app.post('/upload/new', uploadHelper());
 // Example route
 // app.get('/users', user.list);
 
-
-
+/* For AB Testing */
+app.get('/home2', home2.view);
+app.get('/myUploads2', myUploads2.view);
+app.get('/profile2', profile2.view);
+app.get('./quests2', quests2.view);
+app.get('./upload2', upload2.view);
+app.post('/uploadComplete2', upload2.uploadPicture);
 
 // var imgPath = 'OutltsLogo.png';
 

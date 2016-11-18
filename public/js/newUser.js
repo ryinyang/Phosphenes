@@ -1,4 +1,4 @@
-// var loginDatabase = jQuery.getJSON("js/login.json");
+var loginDatabase = jQuery.getJSON("js/login.json");
 
 // $(document).ready(function(){
 // 	$("#create-btn").click(createAccount);
@@ -42,8 +42,34 @@
 
 $(document).ready(function() {
 	initPage();
+	$("#submit-btn").click(send)
 });
 
 function initPage() {
 	
+}
+
+exports.view = function(req, res) {
+	res.render('newUser');
+}
+
+exports.createAccount = function(req, res) {
+	console.log(req.query);
+}
+
+function send() {
+	var uname = $("#uname-input").val();
+	var pword1 = $("#pword-input1").val();
+	var pword2 = $("#pword-input2").val();
+
+	$.post('/newUser/createAccount', 
+	{
+		"uname": uname,
+		"pword": pword1
+	}, 
+	callbackFn());
+}
+
+function callbackFn() {
+	console.log(loginDatabase);
 }

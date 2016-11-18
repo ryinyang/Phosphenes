@@ -3,7 +3,7 @@ var fs = require('fs');
 exports.view = function(req, res) {
 	var myUploadsFile = fs.readFileSync("myUploads.json");
 	var myUploadsObj = JSON.parse(myUploadsFile);
-	res.render('upload', myUploadsObj);
+	res.render('upload2', myUploadsObj);
 };
 
 exports.uploadPicture = function(req, res) {
@@ -13,7 +13,7 @@ exports.uploadPicture = function(req, res) {
 	var dateStr = (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear();
 
 	console.log("Trying to add this:");
-	console.log(req.query);
+	console.log(req.query.im);
 	
 	console.log(myUploadsObj.myUploads);
 
@@ -27,5 +27,5 @@ exports.uploadPicture = function(req, res) {
 	fs.writeFile('myUploads.json', JSON.stringify(myUploadsObj), function (err) {
 		console.log(err);
 	});
-	res.render('uploadComplete');
+	res.render('uploadComplete2');
 }

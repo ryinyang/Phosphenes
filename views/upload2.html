@@ -29,7 +29,7 @@
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" id="menu-btn">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="glyphicon glyphicon-menu-hamburger"></span>
+					<span class="glyphicon glyphicon-menu-hamburger2"></span>
 				</button>
 				<a class="navbar-brand" href="/home">Phosphenes</a>
 			</div>
@@ -38,7 +38,7 @@
 				<ul class="nav navbar-nav" id="dropdown-list">
 					<!-- <li class="active"><a href="#">Link<span class="sr-only">(current)</span></a></li> -->
 					<li><a href="/home">Home</a></li>
-					<li><a href="/quests">Daily Quests</a></li>
+					<li style="background:red"><a href="/quests">Daily Quests</a></li>
 					<li><a href="/profile">Profile</a></li>
 					<li><a href="/myUploads">My Uploads</a></li>
 					<!-- <li><a href="/settings">Settings</a></li> -->
@@ -52,7 +52,7 @@
 	<div class="container" id="upload-box">
 		<h3> Share. </h3>
 		<h4> Take a picture from your device and upload it.</h4>
-		<form id="myform" method="get" role="form" action="/uploadComplete">
+		<form id="myform" method="post" role="form" action="/uploadComplete">
 			<!-- <input id="file-input" type="file" accept="image/*" style="font-size: 1em"> -->
 
 			<input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();" />

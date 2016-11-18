@@ -1,17 +1,17 @@
 var loginDatabase = jQuery.getJSON("js/login.json");
-var first = false;
 
-$(document).ready(function(){
+
+$(document).ready(function() {
 	$("#login-btn").click(checkLogin);
 	$("#create-btn").click(createAccount);
 	$("#back-btn").click(backButton);
 });
 
-function backButton(){
+function backButton() {
 	window.location.href = "/";
 }
 
-function checkLogin(){
+function checkLogin() {
 
 	// Look at only the array of the json
 	var  data = loginDatabase.responseJSON;
@@ -29,20 +29,9 @@ function checkLogin(){
 	console.log(loginDatabase.responseJSON);
 }
 
-// var loginDatabase = jQuery.getJSON("js/login.json");
-
-// $(document).ready(function(){
-// 	$("#create-btn").click(createAccount);
-// 	$("#back-btn").click(backButton);
-// });
-
-// function backButton(){
-// 	window.location.href = "/";
-// }
-
-function createAccount(){
+function createAccount() {
 	var data = loginDatabase.responseJSON;
-	var errMsg = ""
+	var errMsg = "";
 	var uname = $("#uname-input").val();
 	var pword1 = $("#pword-input1").val();
 	var pword2 = $("#pword-input2").val();

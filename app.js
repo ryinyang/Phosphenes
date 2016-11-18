@@ -66,7 +66,7 @@ app.get('/upload', upload.view);
 app.get('/settings', function(req,res){
 	res.render('settings')
 });
-app.get('/uploadComplete', upload.uploadPicture);
+app.post('/uploadComplete', upload.uploadPicture);
 app.get('/newUser', newUser.view);
 // app.get('/newUser/createAccount', newUser.createAccount);
 app.post('/newUser/createAccount', newUser.createAccount);

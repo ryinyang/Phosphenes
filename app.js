@@ -53,10 +53,10 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', function(req,res){
-	res.render('landing')
+	res.render('landing');
 });
 app.get('/home', home.view);
-app.post('/home', newUser.createUser);
+//app.post('/home', newUser.createUser);
 app.get('/feed', feed.view);
 app.get('/login', login.view);
 app.get('/profile', profile.view);
@@ -71,7 +71,7 @@ app.get('/newuser', newUser.view);
 // app.get('/newUser/createAccount', newUser.createAccount);
 // app.post('/newUser/createAccount', newUser.createAccount);
 app.get('/landing', function(req,res){
-	res.render('landing')
+	res.render('landing');
 });
 // Example route
 // app.get('/users', user.list);
@@ -80,8 +80,8 @@ app.get('/landing', function(req,res){
 app.get('/home2', home2.view);
 app.get('/myUploads2', myUploads2.view);
 app.get('/profile2', profile2.view);
-app.get('./quests2', quests2.view);
-app.get('./upload2', upload2.view);
+app.get('/quests2', quests2.view);
+app.get('/upload2', upload2.view);
 app.post('/uploadComplete2', upload2.uploadPicture);
 
 http.createServer(app).listen(app.get('port'), function(){

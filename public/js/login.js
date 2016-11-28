@@ -1,5 +1,20 @@
 var loginDatabase = jQuery.getJSON("js/login.json");
 
+var data = [
+	{
+		"uname":"username",
+		"pword":"password"
+	},
+	{
+		"uname":"ryan",
+		"pword":"yang"
+	},
+	{
+		"uname":"raina",
+		"pword":"pupper"
+	},
+]
+
 
 $(document).ready(function() {
 	$("#login-btn").click(checkLogin);
@@ -13,11 +28,12 @@ function backButton() {
 
 function checkLogin() {
 
-	data = loginDatabase.responseText;
-	console.log(data);
+	// data = JSON.parse(loginDatabase.responseText);
+	console.log(data[0]);
  
  	// Loop through the database and check for the correct uname/pword
  	for (var i = data.length - 1; i >= 0; i--) {
+ 		console.log("Checking: " + data[i].uname + " " + data[i].pword);
  		if ($("#uname-input").val() == data[i].uname && 
  			$("#pword-input").val() == data[i].pword) {
  			console.log("correct");

@@ -1,5 +1,5 @@
 var loginDatabase = jQuery.getJSON("js/login.json");
-
+//
 var data = [
 	{
 		"uname":"username",

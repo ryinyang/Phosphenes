@@ -1,3 +1,4 @@
+//
 /*function modify_qty(val) {
 
 	var qty = document.getElementById('qty').value;

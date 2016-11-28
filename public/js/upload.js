@@ -1,3 +1,4 @@
+//
 function encodeImageFileAsURL() {
 	var filesSelected = document.getElementById("inputFileToLoad").files;
 	if (filesSelected.length > 0) {

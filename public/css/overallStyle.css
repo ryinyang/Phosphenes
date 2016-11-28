@@ -1,6 +1,17 @@
 :root {
 	--main-color: #94c2db;
 	--text-color: white;
+	font-family: "NeutraDemi";
+}
+
+@font-face {
+	font-family: "Kaufmann";
+	src: url("../fonts/Kaufmann-Bold.otf");
+}
+
+@font-face {
+	font-family: "NeutraDemi";
+	src: url("../fonts/NeutraText-LightAlt.ttf");
 }
 
 a {
@@ -27,4 +38,17 @@ a {
 
 button:focus {
 	background: var(--main-color) !important;
+}
+
+#cursive {
+	font-family: "Kaufmann" !important;
+}
+
+body {
+	font-family: "NeutraDemi";
+	/*font-size: 120% !important;*/
+}
+
+.navbar-brand {
+	font-family: "Kaufmann";
 }

@@ -2,7 +2,7 @@
 // var posts = require('../feed.json');
 
 exports.view = function(req, res) {
-	res.render('newUser');
+	res.render('newUser'); //
 }
 
 // exports.createUser = function(req, res) {

@@ -1,6 +1,6 @@
 var loginDatabase = jQuery.getJSON("js/login.json");
 // var fs = require('fs');
-//
+
 $(document).ready(function(){
 	$("#submit-btn").click(createAccount);
 	$("#back-btn").click(backButton);

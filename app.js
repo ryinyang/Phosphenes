@@ -63,11 +63,13 @@ app.get('/profile', profile.view);
 app.get('/myUploads', myUploads.view);
 app.get('/quests', quests.view);
 app.get('/upload', upload.view);
-app.get('/settings', function(req,res){
-	res.render('settings')
-});
+// app.get('/settings', function(req,res){
+// 	res.render('settings')
+// });
 app.post('/uploadComplete', upload.uploadPicture);
-app.get('/newUser', newUser.view);
+app.get('/newUser', function(req,res) {
+	res.render('newUser');
+});
 // app.get('/newUser/createAccount', newUser.createAccount);
 // app.post('/newUser/createAccount', newUser.createAccount);
 app.get('/landing', function(req,res){

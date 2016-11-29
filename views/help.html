@@ -2,14 +2,14 @@
 
 <html>
 <head>
-	<title>Phosphenes | My Uploads</title>
+	<title>Phosphenes</title>
 	<meta charset="utf-8">
 	<!-- Makes page responsive to mobile devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/overallStyle.css" rel="stylesheet">
-	<link href="css/myUploads.css" rel="stylesheet">
+	<link href="css/help.css" rel="stylesheet">
 </head>
 
 <body>
@@ -32,33 +32,25 @@
 					<li><a href="/profile">Profile</a></li>
 					<li><a href="/myUploads">My Uploads</a></li>
 					<!-- <li><a href="/settings">Settings</a></li> -->
+					<li><a href="/help">Help</a></li>
 					<li><a href="/landing">Sign Out</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
 	</nav>
 
+
+
 	<div class="container" id="body">
-		<h2> Reminisce.</h2>
-		<p> Remember your artwork.</p>
+		<img src="img/help.png" class="img-responsive">
+		<a href="/home"><button class="btn btn-block btn-lg">I'm Ready!</button></a>
 	</div>
 
-	<div class="container">
-		{{#each myUploads}}
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h3 class="panel-title">{{date}}</h3>
-			</div>
-			<div class="panel-body">
-				<img class="img-responsive" src={{img}}></img>
-			</div>
-			<div class="panel-footer"><center>{{quest}}</center>
-			</div>
-		</div>
-		{{/each}}
-	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/home.js"></script>
+	<script src="js/upvoteScript.js"></script>
 </body>
 </html>

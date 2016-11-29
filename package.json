@@ -13,8 +13,7 @@
   },
   "dependencies": {
     "express": "3.x",
-    "express3-handlebars": "*",
-    "file-system": "^2.2.1"
+    "express3-handlebars": "*"
   },
   "engines": {
     "node": "0.10.x"

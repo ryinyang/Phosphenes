@@ -38,7 +38,7 @@ a {
 }
 
 #body {
-	margin-top: 70px;
+	margin-top: 50px;
 }
 
 button:focus {
@@ -48,4 +48,9 @@ button:focus {
 #cursive {
 	font-family: "Kaufmann";
 	font-size: 175%;
+}
+
+#logo {
+	margin-top: 12px;
+	margin-left: -10px;
 }

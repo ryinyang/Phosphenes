@@ -73,6 +73,9 @@ app.get('/newUser', newUser.view);
 app.get('/landing', function(req,res){
 	res.render('landing')
 });
+app.get('/help', function(req,res) {
+	res.render('help');
+})
 // Example route
 // app.get('/users', user.list);
 

@@ -19,7 +19,7 @@ var feed = require('./routes/feed');
 var home = require('./routes/home');
 var login = require('./routes/login');
 var myUploads = require('./routes/myUploads');
-var newUser = require('./routes/newUser');
+var newuser = require('./routes/newuser');
 var profile = require('./routes/profile');
 var quests = require('./routes/quests');
 var upload = require('./routes/upload');
@@ -56,7 +56,7 @@ app.get('/', function(req,res){
 	res.render('landing')
 });
 app.get('/home', home.view);
-app.post('/home', newUser.createUser);
+app.post('/home', newuser.createUser);
 app.get('/feed', feed.view);
 app.get('/login', login.view);
 app.get('/profile', profile.view);
@@ -67,7 +67,9 @@ app.get('/settings', function(req,res){
 	res.render('settings')
 });
 app.post('/uploadComplete', upload.uploadPicture);
-app.get('/newuser', newUser.view);
+app.get('/newuser', function(req, res){
+	res.render('newuser');
+});
 // app.get('/newUser/createAccount', newUser.createAccount);
 // app.post('/newUser/createAccount', newUser.createAccount);
 app.get('/landing', function(req,res){

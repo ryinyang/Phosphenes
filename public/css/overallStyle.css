@@ -3,9 +3,15 @@
 	--text-color: white;
 }
 
-@font-family {
-	
+/*@font-face {
+	font-family: "Kaufmann";
+	src: url("../fonts/Kaufmann-Bold.otf");
 }
+
+@font-face {
+	font-family: "NeutraText";
+	src
+}*/
 
 a {
 	color: inherit;

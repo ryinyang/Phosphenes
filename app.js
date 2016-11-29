@@ -56,7 +56,7 @@ app.get('/', function(req,res){
 	res.render('landing')
 });
 app.get('/home', home.view);
-app.post('/home', newUser.createUser);
+// app.post('/home', newUser.createUser);
 app.get('/feed', feed.view);
 app.get('/login', login.view);
 app.get('/profile', profile.view);

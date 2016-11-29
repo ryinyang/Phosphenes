@@ -1,5 +1,14 @@
-var loginDatabase = jQuery.getJSON("js/login.json");
-
+//var loginDatabase = jQuery.getJSON("js/login.json");
+var  data = [
+		{
+			"uname": "ryan",
+			"pword": "yang"
+		},
+		{
+			"uname": "raina",
+			"pword": "puppers"
+		}
+	]
 
 $(document).ready(function() {
 	$("#login-btn").click(checkLogin);
@@ -13,9 +22,6 @@ function backButton() {
 
 function checkLogin() {
 
-	// Look at only the array of the json
-	var  data = loginDatabase.responseJSON;
-
 	// Loop through the database and check for the correct uname/pword
 	for (var i = data.length - 1; i >= 0; i--) {
 		if ($("#uname-input").val() == data[i].uname && 
@@ -26,11 +32,9 @@ function checkLogin() {
 		}
 	};
 	alert("You've entered the incorrect username or password.");
-	console.log(loginDatabase.responseJSON);
 }
 
 function createAccount() {
-	var data = loginDatabase.responseJSON;
 	var errMsg = "";
 	var uname = $("#uname-input").val();
 	var pword1 = $("#pword-input1").val();
@@ -38,13 +42,14 @@ function createAccount() {
 
 
 	for (var i = data.length - 1; i >= 0; i--) {
-		// Check for duplicate username
+		// Check for input
 		if (uname == "") {
 			errMsg += "You forgot to choose a username."
 		}
 		if (pword1 == "" || pword2 == "") {
 			errMsg += "You left out one of the password fields."
 		}
+		// Check for duplicate username
 		if (data[i].uname == uname) {
 			errMsg += "This username is taken.\n";
 		}
@@ -59,11 +64,11 @@ function createAccount() {
 		}
 		
 		// Push new account into "database"
-		loginDatabase.responseJSON.push({
-			uname: uname,
-			pword: pword1
-		});
-		console.log(loginDatabase.responseJSON);
-		window.location.href = "/home";
+		// loginDatabase.responseJSON.push({
+		// 	uname: uname,
+		// 	pword: pword1
+		// });
+		// console.log(loginDatabase.responseJSON);
+			window.location.href = "/home";
 	};
 }

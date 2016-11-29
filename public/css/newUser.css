@@ -1,15 +1,7 @@
-#submit-btn {
+#create-btn {
 	float: right;
-	margin-top: 20px;
-	background-color: #94c2db;
-	color: white;
-	width: 47%;
 }
 
 #back-btn {
 	float: left;
-	margin-top: 20px;
-	background-color: #94c2db;
-	color: white;
-	width: 47%;
 }

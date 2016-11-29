@@ -29,3 +29,11 @@ body {
 	background-color: var(--main-color);
 	background-repeat: no-repeat;*/
 }
+
+h1 {
+	font-size: 250% !important;
+}
+
+p {
+	font-size: 150%;
+}

@@ -3,15 +3,21 @@
 	--text-color: white;
 }
 
-/*@font-face {
+/* Cursive */
+@font-face {
 	font-family: "Kaufmann";
 	src: url("../fonts/Kaufmann-Bold.otf");
 }
 
+/* Noncursive */
 @font-face {
 	font-family: "NeutraText";
-	src
-}*/
+	src: url("../fonts/NeutraDemi.otf");
+}
+
+body {
+	font-family: "NeutraText" !important;
+}
 
 a {
 	color: inherit;
@@ -37,4 +43,9 @@ a {
 
 button:focus {
 	background: var(--main-color) !important;
+}
+
+#cursive {
+	font-family: "Kaufmann";
+	font-size: 175%;
 }

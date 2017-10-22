@@ -8,6 +8,7 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
+
 /* For AB Testing */
 var home2 = require('./routes/home2');
 var myUploads2 = require('./routes/myUploads2');
@@ -23,6 +24,7 @@ var newUser = require('./routes/newUser');
 var profile = require('./routes/profile');
 var quests = require('./routes/quests');
 var upload = require('./routes/upload');
+//var datepicker = require('./routes/datepicker');
 // Example route
 // var user = require('./routes/user');
 
@@ -63,6 +65,7 @@ app.get('/profile', profile.view);
 app.get('/myUploads', myUploads.view);
 app.get('/quests', quests.view);
 app.get('/upload', upload.view);
+//app.get('/datepicker',datepicker.view)
 app.get('/settings', function(req,res){
 	res.render('settings')
 });
@@ -76,6 +79,12 @@ app.get('/landing', function(req,res){
 app.get('/help', function(req,res) {
 	res.render('help');
 })
+
+//new stuff
+app.get('js/libs/modernizr-2.0.6.min.js', function(req, res, next) {
+    res.render('modernizr-2.0.6.min.js');
+});
+
 // Example route
 // app.get('/users', user.list);
 

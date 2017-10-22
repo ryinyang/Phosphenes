@@ -23,7 +23,7 @@ a {
 }
 
 #main-navbar {
-    background-color: #94c2db;
+    background-color: #ADE1EE;;
     color: white;
 }
 
@@ -33,7 +33,7 @@ a {
 
 .upfloat {
     /*margin-top: 15px;*/
-    background-color: #94c2db;
+    background-color: #ADE1EE;;
     color: white;
     text-align: center;
 }
@@ -44,7 +44,7 @@ a {
 }
 
 div > .panel > .panel-heading {
-    background: #94c2db !important;
+    background: #ADE1EE; !important;
     color: white;
     border-radius: 0;
     border: 0;
@@ -69,7 +69,7 @@ div > .panel > .panel-body {
 .cloud {
     display: inline-block;
     font-size: 5em;
-    color: #94c2db;
+    color: #ADE1EE;;
 }
 
 .cloud-label {
@@ -90,7 +90,7 @@ div > .panel > .panel-body {
 }
 
 .progress-bar {
-    background-color: #94c2db;
+    background-color: #ADE1EE;;
 }
 
 #menu-btn:active {

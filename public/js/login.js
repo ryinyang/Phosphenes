@@ -5,7 +5,7 @@ var  data = [
 			"pword": "yang"
 		},
 		{
-			"uname": "raina",
+			"uname": "jessica",
 			"pword": "puppers"
 		}
 	]
@@ -24,7 +24,7 @@ function checkLogin() {
 
 	// Loop through the database and check for the correct uname/pword
 	for (var i = data.length - 1; i >= 0; i--) {
-		if ($("#uname-input").val() == data[i].uname && 
+		if ($("#uname-input").val() == data[i].uname &&
 			$("#pword-input").val() == data[i].pword) {
 			console.log("correct");
 			window.location.href = "/home";
@@ -62,7 +62,7 @@ function createAccount() {
 			alert(errMsg);
 			return;
 		}
-		
+
 		// Push new account into "database"
 		// loginDatabase.responseJSON.push({
 		// 	uname: uname,

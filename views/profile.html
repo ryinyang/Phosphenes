@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Phosphenes | Your Profile</title>
+
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/overallStyle.css" rel="stylesheet">	
+	<link href="css/overallStyle.css" rel="stylesheet">
 	<link href="css/profile.css" rel="stylesheet">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- AWRNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,18 +27,18 @@
 					<span class="sr-only">Toggle navigation</span>
 					<span class="glyphicon glyphicon-menu-hamburger"></span>
 				</button>
-				<img src="img/small-logo.png" id="logo"><a id="cursive" class="navbar-brand" href="/home">Phosphenes</a>
+				<img src="img/dj-small.jpg" id="logo">
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav" id="dropdown-list">
 					<!-- <li class="active"><a href="#">Link<span class="sr-only">(current)</span></a></li> -->
 					<li><a href="/home">Home</a></li>
-					<li><a href="/quests">Daily Quests</a></li>
+					<li><a href="/help">Calendar</a></li>
+					<li><a href="/quests">Genome Data</a></li>
 					<li><a href="/profile">Profile</a></li>
-					<li><a href="/myUploads">My Uploads</a></li>
+					<li><a href="/myUploads">Data Uploads</a></li>
 					<!-- <li><a href="/settings">Settings</a></li> -->
-					<li><a href="/help">Help</a></li>
 					<li><a href="/landing">Sign Out</a></li>
 				</ul>
 			</div><!-- /.navbar-collapse -->
@@ -46,19 +46,18 @@
 	</nav>
 
 	<div class="container" id="body">
-		<h2> Track.</h2>
-		<p> Track your Level, Artsperience, and Achievements.</p>
+		<h2> Your Profile</h2>
 	</div>
 
 	<div class="container text-center">
 		<div class="row ">
-			<h2>KillJoy67</h2>
+			<h2>User 1</h2>
 		</div>
 		<div class="row">
 			<img src="http://theawesomedaily.com/wp-content/uploads/2014/11/mr-bean-historic-portraits-15.jpg" id="profile-picture">
 		</div>
 		<div class="row">
-			<center><p>Level 2</p></center>
+			<!--<center><p>Level 2</p></center>-->
 		</div>
 		<div class="row">
 			<div class="progress" id="progress-container">
@@ -69,25 +68,7 @@
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="panel-group">
-			<div class="panel panel-default"><div class="panel-heading">Achievements</div></div>
-			<div class="panel panel-default"><div class="panel-body">
-				{{#each achievements}}
-					<a href="#{{id}}"><div class="panel panel-default"><div class="panel-body" id="achievement-btn">{{title}}</div></div></a>
-				 	<div id="{{id}}" class="overlay">
-						<div class="popup">
-							<h3>{{title}}</h3>
-							<a class="close" href="#">&times;</a>
-							<div class="content">
-								{{description}}
-							</div>
-						</div>
-					</div>
-				{{/each}}
-			</div></div>
-		</div>
-	</div>
+	
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

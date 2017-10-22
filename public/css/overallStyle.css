@@ -1,5 +1,5 @@
 :root {
-	--main-color: #94c2db;
+	--main-color: #ADE1EE;;
 	--text-color: white;
 }
 
@@ -35,6 +35,7 @@ a {
 
 #dropdown-list > li > a {
 	color: var(--text-color);
+	
 }
 
 #body {
@@ -48,6 +49,7 @@ button:focus {
 #cursive {
 	font-family: "Kaufmann";
 	font-size: 175%;
+	text-indent: inherit;
 }
 
 #logo {
